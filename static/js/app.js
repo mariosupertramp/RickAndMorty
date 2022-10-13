@@ -6,10 +6,13 @@ const $characterContainer = document.querySelector('#character-container');
 
 class Character{
 
-    constructor({name, image}){
+    constructor({name, image, species,gender, status}){
 
         this.name = name;
         this.image = image;
+        this.species = species;
+        this.gender = gender;
+        this.status = status;
         this.render();
     }
 
@@ -17,8 +20,18 @@ class Character{
         return `
         <article class="caracter">
                 <div class="caracter-grid">
-                    <h2>${this.name}</h2>
-                    <img src=${this.image} alt="">
+                <img class="character-image" src=${this.image} alt="">
+                
+                <div class="character-name">
+                <h2>${this.name}</h2>
+                </div>
+
+                    <div class="character-labels">
+                    <h3 class="character-label">Specie: ${this.species} </h3>
+                    <h3 class="character-label">Género: ${this.gender} </h3>
+                    <h3 class="character-label">Status: ${this.status} </h3>
+                    </div>
+
                 </div>
             </article>
             `
@@ -31,7 +44,6 @@ render(){
 }
 
 
-
 async function initApp(initID){
     const characterData = await api.getCaracter(initID);
     console.log(characterData)
@@ -39,4 +51,5 @@ async function initApp(initID){
     const rick = new Character(characterData);
 }
 
-initApp(2);
+
+initApp(5);

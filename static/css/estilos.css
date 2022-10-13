@@ -1,11 +1,94 @@
 body{
     margin: 0;
     background: #00a5be;
+    font-family: system-ui;
 }
 
 .logo{
-
-margin: 0 auto;
+margin: 0 auto 2em;
 display: block;
+}
+
+.wrapper{
+max-width: 1280px;
+margin: auto;
+padding: 0 2em;
+}
+
+
+.caracter{
+text-align: center;
+}
+
+.character-image{
+width: 100%;
+border-radius: 50%;
+}
+
+
+.character-labels{
+max-width: 300px;
+}
+
+
+.character-label{
+background: #685128;
+padding: 1em;
+color: white;
+border-radius: 10px;
+/* display: inline-flex; */
+}
+
+.character-name{
+font-size: 30px;
+}
+
+
+
+@media screen and (min-width: 1024px) {
+
+.caracter-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "name image" "labels image";
+}
+
+
+    .character-image{
+        grid-area: name;
+        width: 300px;
+        border-radius: 50%;
+        }
+
+        .character-name{
+            text-align: left;
+        }
+        
+        .character-name h2{
+            font-size: 50px;
+            position: relative;
+            display: inline-flex;
+        }
+
+
+        .character-name h2:after{
+content: "";
+width: 30px;
+height: 2px;
+background-color: red;
+display: inline-flex;
+position: absolute;
+left: 100%;
+        }
+
+    .character-labels{
+        grid-area: labels;
+        max-width: 300px;
+        }
+
+    .character-image{
+            grid-area: image;
+        }
+    
 
 }
