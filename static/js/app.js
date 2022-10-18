@@ -52,4 +52,4 @@ async function initApp(initID){
 }
 
 
-initApp(5);
+initApp(2);

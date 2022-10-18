@@ -36,11 +36,15 @@ background: #685128;
 padding: 1em;
 color: white;
 border-radius: 10px;
+text-align: left;
+font-size: 25px;
+font-weight: 400;
 /* display: inline-flex; */
 }
 
 .character-name{
-font-size: 30px;
+    text-align: left;
+    font-size: 50px;
 }
 
 
@@ -73,12 +77,13 @@ font-size: 30px;
 
         .character-name h2:after{
 content: "";
-width: 30px;
-height: 2px;
-background-color: red;
+width: 87px;
+height: 6px;
+background-color: #F7391C;
 display: inline-flex;
 position: absolute;
-left: 100%;
+left: calc(100% + 5px);
+top: 50%;
         }
 
     .character-labels{
@@ -89,6 +94,25 @@ left: 100%;
     .character-image{
             grid-area: image;
         }
-    
+
+
+    .navigation{
+       transform-origin: left bottom;
+       transform: rotate(-90deg);
+       position: absolute;
+       left: 4em;
+       width: 100vh;
+       bottom: 0;
+       text-align: center;
+       border: 1px solid red;
+    }
+
+    .dot{
+        width: 10px;
+        height: 10px;
+        background: black;
+        border-radius: 50%;
+        display: inline-flex;
+    }
 
 }
