@@ -105,6 +105,12 @@ top: 50%;
        bottom: 0;
        text-align: center;
        border: 1px solid red;
+       text-transform: uppercase;
+    }
+
+    .navigation .text {
+        display: inline-flex;
+        padding: 0 35px;
     }
 
     .dot{
@@ -112,6 +118,14 @@ top: 50%;
         height: 10px;
         background: black;
         border-radius: 50%;
+        display: inline-flex;
+        margin-inline: 5px;
+    }
+    
+    .line{
+        width: 300px;
+        height: 3px;
+        background: black;
         display: inline-flex;
     }
 
