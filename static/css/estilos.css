@@ -129,13 +129,4 @@ top: 50%;
         display: inline-flex;
     }
 
-
-    .arrow{
-
-        text-align: right;
-        font-size: 60px;
-        cursor: pointer;
-
-    }
-
 }
